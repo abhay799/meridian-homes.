@@ -1,0 +1,20 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install
+      - run: npm run typecheck
+        env: &env
+          NEXT_PUBLIC_SUPABASE_URL: https://example.supabase.co
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: example-public-anon-key
+          NEXT_PUBLIC_WHATSAPP: '919999999999'
+          ALLOW_INDEXING: 'false'
+      - run: npm run lint
+      - run: npm run build
+        env: *env

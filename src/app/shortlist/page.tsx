@@ -1,0 +1,1 @@
+import type{Metadata}from'next';import{ShortlistPage}from'@/components/ShortlistPage';export const metadata:Metadata={title:'Your shortlist'};export default function Page(){return <main className="wrap section"><h1>Your shortlist</h1><p>Saved properties are stored only in this browser. No account required.</p><ShortlistPage/></main>}

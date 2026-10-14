@@ -1,0 +1,1 @@
+import Link from'next/link';export default function NotFound(){return <main className="wrap section"><h1>We couldn&apos;t find that property.</h1><p>The URL may have changed or this sample listing may be unpublished.</p><Link className="btn" href="/listings">Browse sample properties →</Link></main>}

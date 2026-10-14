@@ -1,0 +1,1 @@
+import{LoginForm}from'@/components/admin/LoginForm';export const dynamic='force-dynamic';export default function Login(){return <main className="wrap section" style={{maxWidth:530}}><p className="tag">Private management</p><h1>Admin sign in</h1><p>Access is for manually provisioned agency administrators only.</p><LoginForm/></main>}
